@@ -1,7 +1,10 @@
 function skillMember() {
-    var skill = document.getElementById("skill").value;
-    var member = document.getElementById("member").value;
-    var skillMember = document.getElementById("skillMember");
-    var skillMemberValue = skill + " " + member;
-    skillMember.innerHTML = skillMemberValue;
+    var member = document.getElementById("member");
+    var memberValue = member.options[member.selectedIndex].value;
+    var memberText = member.options[member.selectedIndex].text;
+    if (memberValue == "member") {
+        document.getElementById("member").style.color = "#999";
+    } else {
+        document.getElementById("member").style.color = "#000";
+    }
 }
